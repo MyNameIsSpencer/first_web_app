@@ -1,12 +1,21 @@
 require 'sinatra'
 
+get '/' do
+  redirect to('/home')
+end
+
 get '/home' do
   erb :index
+end
+
+get '/gallery' do
+  redirect to('/portfolio')
 end
 
 get '/portfolio' do
   erb :gallery
 end
+
 
 get '/about' do
   @skills = ['git', 'HTML', 'CSS', 'Ruby']
@@ -15,6 +24,10 @@ get '/about' do
 end
 
 get '/favourites' do
-  @fav_links = {'yahoo'=>'https://ca.yahoo.com/?p=us', 'google'=>'https://www.google.ca/', 'facebook'=> 'https://www.facebook.com/', 'bitmaker'=>'https://bitmaker.co/', "eBaum's World" => 'http://www.ebaumsworld.com/'}
+  @fav_links = {
+    'yahoo'=>'https://ca.yahoo.com/?p=us', 'google'=>'https://www.google.ca/',
+    'facebook'=> 'https://www.facebook.com/', 'bitmaker'=>'https://bitmaker.co/',
+    "eBaum's World" => 'http://www.ebaumsworld.com/'
+  }
   erb :favourites
 end
