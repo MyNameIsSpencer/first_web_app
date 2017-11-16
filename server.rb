@@ -5,5 +5,5 @@ get '/home' do
 end
 
 get '/portfolio' do
-  erb :gallery
+  erb :index
 end
