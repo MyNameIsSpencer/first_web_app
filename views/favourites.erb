@@ -1,0 +1,13 @@
+<h1>
+FAAAAVVVVV SITES<br>
+_____________________________
+</h1>
+
+<h2> Sites</h2>
+
+<ul>
+<% @fav_links.each do |websites,link| %>
+  <li> <a href='<%=link%>'> <%= websites %> </a></li>
+
+  <% end %>
+</ul>
